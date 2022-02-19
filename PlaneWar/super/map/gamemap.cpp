@@ -14,6 +14,7 @@ public:
 
     //地图滚动幅度
     int scroll_speed;
+
 };
 
 GameMap::GameMap(QObject *parent)
@@ -50,6 +51,7 @@ void GameMap::mapPosition()
     {
         d.map2_posY =0;
     }
+
 }
 
 QPixmap GameMap::getMap1()
@@ -89,5 +91,5 @@ void GameMap::initContent()
 
     //设置地图滚动速度
     d.scroll_speed = MAP_SCROLL_SPEED;
-}
 
+}

@@ -2,9 +2,9 @@ DEPENDPATH += $$PWD
 INCLUDEPATH += $$PWD
 
 HEADERS += \
-    $$PWD/heroplane.h \
-    $$PWD/herobullet.h
+    $$PWD/herobullet.h \
+    $$PWD/heroplane.h
 
 SOURCES += \
-    $$PWD/heroplane.cpp \
-    $$PWD/herobullet.cpp
+    $$PWD/herobullet.cpp \
+    $$PWD/heroplane.cpp

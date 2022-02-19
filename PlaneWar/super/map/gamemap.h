@@ -11,8 +11,8 @@ class GameMap : public QObject
 {
     Q_OBJECT
     DPTR_DECLARE_PRIVATE(GameMap)
-public:
-    explicit GameMap(QObject *parent = nullptr);
+    public:
+        explicit GameMap(QObject *parent = nullptr);
     virtual ~GameMap();
 
 protected:

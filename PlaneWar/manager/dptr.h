@@ -46,60 +46,7 @@
 #ifndef DPTR_H
 #define DPTR_H
 
-/*!
-  requrement: Base class must have default ctor.
 
- example:
-    //Base.h
-    class BasePrivate
-    class Base
-    {
-        DPTR_DECLARE_PRIVATE(Base)
-    public:
-        Base();
-        virtual ~Base();
-    protected:
-        Base(BasePrivate& d);
-        DPTR_DECLARE(Base)
-    };
-    //Base.cpp:
-    Base::Base(){}
-    Base::Base(BasePrivate& d):DPTR_INIT(&d){}
-    ...
-    //Base_p.h:
-    class Base;
-    class BasePrivate : public DPtrPrivate<Base>
-    {
-    public:
-        int data;
-    };
-    //Derived.h:
-    class DerivedPrivate;
-    class Derived : public Base
-    {
-        DPTR_DECLARE_PRIVATE(Derived)
-    public:
-        Derived();
-        virtual ~Derived();
-    protected:
-        Derived(DerivedPrivate& d);
-    };
-    //Derived.cpp
-    Derived::Derived():Base(*new DerivedPrivate()){}
-    Derived::Derived(DerivedPrivate& d):Base(d){}
-    //Derived_p.h
-    class DerivedPrivate : public BasePrivate
-    {
-    public:
-        int more_data;
-    };
-*/
-
-/*
- * Initialize the dptr when calling Base(BasePrivate& d) ctor.
- * The derived class using this ctor will reduce memory allocation
- * p is a DerivedPrivate*
- */
 #define DPTR_INIT(p) dptr(p)
 //put in protected
 #define DPTR_DECLARE(Class) DPtrInterface<Class, Class##Private> dptr;

@@ -2,7 +2,7 @@ DEPENDPATH += $$PWD
 INCLUDEPATH += $$PWD
 
 HEADERS += \
-    $$PWD/gamemap.h
+    $$PWD/gamemap.h \
 
 SOURCES += \
-    $$PWD/gamemap.cpp
+    $$PWD/gamemap.cpp \
